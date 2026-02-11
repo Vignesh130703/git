@@ -3,7 +3,8 @@ print("📚 Student Task Manager")
 while True:
     print("\n1. Add Task")
     print("2. View Tasks")
-    print("3. Exit")
+    print("3. Delete All Tasks")
+    print("4. Exit")
 
     choice = input("Enter choice: ")
 
@@ -18,4 +19,8 @@ while True:
             print(f.read())
 
     elif choice == "3":
+        open("tasks.txt", "w").close()
+        print("All tasks deleted!")
+
+    elif choice == "4":
         break
